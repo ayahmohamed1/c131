@@ -1,0 +1,83 @@
+.page {
+  min-height: 100vh;
+  background: var(--paper);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.inner {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem 0;
+}
+
+.dashedTop, .dashedBottom {
+  border-top: 2px dashed var(--primary-light);
+}
+
+/* شكل الورقة المسطرة المتناسق تماماً مع سطور الكتابة */
+.letter {
+  padding: 32px 24px;
+  background: var(--paper);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 31px,
+    color-mix(in srgb, var(--primary-light) 35%, transparent) 32px
+  );
+  border-left: 3px solid var(--primary-light);
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(27, 42, 74, 0.05);
+}
+
+.line {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  line-height: 32px;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0;
+}
+
+.spacer {
+  height: 32px;
+}
+
+.signoff {
+  margin-top: 1.8rem;
+  text-align: right;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.signature {
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-hand);
+  font-size: clamp(1.8rem, 7vw, 2.8rem);
+  color: var(--primary);
+  font-weight: 700;
+  transform: rotate(-1.5deg);
+  display: inline-block;
+}
